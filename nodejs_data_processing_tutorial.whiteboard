@@ -1,0 +1,34 @@
+[slide]
+title=Welcome
+markdown : '''
+# Node.js data processing tutorial
+
+
+* by [michaelb](http://michaelb.org)
+
+* Developed as an example tutorial for [Whiteboard](http://whiteobard.michaelb.org/)
+
+
+## Introduction
+
+In this tutorial you'll learn how to use Node.js and Bash to write command-line
+tools for transforming data.
+
+**Before you begin**, ensure you have a fairly recent version of
+[Node.js](https://nodejs.org/) installed on your system. You should have at
+least **version 6** or greater.
+
+> `Ctrl + →` or right click to go on to the next slide!
+'''
+
+
+[slide]
+title=fs: reading and writing files
+markdown : '''
+
+```
+nodejs
+```
+
+'''
+

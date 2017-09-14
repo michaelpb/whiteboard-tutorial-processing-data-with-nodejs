@@ -57,3 +57,24 @@ typings/
 # dotenv environment variables file
 .env
 
+# Misc stuff
+*.pyc
+*~
+.idea/
+docs/build
+*.orig
+*.rej
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.po
+*.egg*
+*.log
+*untracked.*
+docs/_build/*
+
+node_modules/*
+tmp/*
+dist/*
+
