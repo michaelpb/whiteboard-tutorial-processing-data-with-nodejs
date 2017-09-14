@@ -81,6 +81,7 @@ cat output.txt
 '''
 
 [slide]
+layout=vertical
 title=Challenge: Comment stripper
 terminal=./challenge-strip-comments/
 editor : '''
@@ -92,6 +93,7 @@ challenge-strip-comments/commentstripper-finished.js
 
 
 [slide]
+layout=vertical
 title=Bonus challenges
 terminal=./challenge-csv-to-json/
 markdown : '''
@@ -128,6 +130,7 @@ reading-and-writing/linereverser.js
 '''
 
 [slide]
+layout=vertical
 title=Conclusion
 markdown : '''
 # That's it! 
