@@ -21,14 +21,72 @@ least **version 6** or greater.
 > `Ctrl + →` or right click to go on to the next slide!
 '''
 
-
 [slide]
+layout=vertical
 title=fs: reading and writing files
+editor=./0-reading-and-writing/linereverser.js
+terminal=./0-reading-and-writing
 markdown : '''
 
+# Using `fs` and `readline`
+
+`fs` is the built-in module for filesystem manipulation in node. We'll be using
+this module to *write* data to a file.
+
+`readline` is a built-in helper module that makes it easy to read data
+line-by-line from a file. We'll use this to *read* data line-by-line from the
+example poem (jabberwocky.txt).
+
+## Working with streams
+
+`fs.createReadStream` and `fs.createWriteStream` are functions built-in to node
+that create useful objects that can be used to "read" and "write" from
+piece-meal (as opposed to reading the entire file or writing to the file all at
+once).
+
+[Full documentation here.](https://nodejs.org/api/stream.html#stream_class_stream_writable)
+
+## readline.createInterface
+
+The key code here is:
+
 ```
-nodejs
+const readStream = fs.createReadStream(inputPath);
+const rl = readline.createInterface({ input: readStream });
 ```
 
+Here we create a "readable stream" with the input path supplied by the user.
+We then hand that readable stream over to the `readline` helper, which will
+automatically parse that file into individual lines, making it easy for us to
+ingest.
+
+
+## rl.on('line', ...)
+
+This 'line' event allows us to effectively loop through each line of the file,
+handling it line by line.
+
+# Running example file
+
+To test it out, run:
+
+```
+node linereverser.js jabberwocky.txt output.txt
+```
+
+To check the output, run:
+```
+node output.txt
+```
+
+'''
+
+[slide]
+title=Challenge 1: Comment stripper
+editor : '''
+1-challenge-strip-comments/commentstripper.js
+0-reading-and-writing/linereverser.js
+1-challenge-strip-comments/input.js
+1-challenge-strip-comments/commentstripper-finished.js
 '''
 
