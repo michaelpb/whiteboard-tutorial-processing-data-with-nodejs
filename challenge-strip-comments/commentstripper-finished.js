@@ -1,3 +1,7 @@
+// The solution to this one is almost identical to the previous example. The
+// main difference is the function reverseString is replaced with a function
+// that strips comments from each line.
+
 // Require "built-in" node dependencies
 const fs = require('fs');
 const readline = require('readline');
@@ -25,9 +29,10 @@ if (cliArgs.length !== 2) {
 // (same as inputPath = cliArgs[0], outputPath = cliArgs[1])
 const [inputPath, outputPath] = cliArgs;
 
-console.log(`Reversing each line from ${inputPath} -> ${outputPath} ...`);
+console.log(`Stripping comments each from ${inputPath} -> ${outputPath} ...`);
 
-// reverse string is a little function to reverse a given string
+// Here's the heart of the data processing logic: we strip the comments from
+// each string
 function stripCommentFromString(string) {
     const splitBySlashes = string.split('//');
     if (splitBySlashes.length < 2) {
@@ -50,6 +55,6 @@ const rl = readline.createInterface({ input: readStream });
 // line and ensure it has a newline character at the end before writing it to
 // the output.
 rl.on('line', (line) => {
-    const reversedLine = stripCommentFromString(line) + "\n";
-    outputFile.write(reversedLine);
+    const strippedLine = stripCommentFromString(line) + "\n";
+    outputFile.write(strippedLine);
 });

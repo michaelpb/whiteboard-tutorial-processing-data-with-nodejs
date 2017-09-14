@@ -6,7 +6,7 @@ markdown : '''
 
 * by [michaelb](http://michaelb.org)
 
-* Developed as an example tutorial for [Whiteboard](http://whiteobard.michaelb.org/)
+* Developed as an example tutorial for [Whiteboard](http://whiteboard.michaelb.org/)
 
 
 ## Introduction
@@ -76,9 +76,8 @@ node linereverser.js jabberwocky.txt output.txt
 
 To check the output, run:
 ```
-node output.txt
+cat output.txt
 ```
-
 '''
 
 [slide]
