@@ -2,12 +2,9 @@
 
 ## What is this
 
-This is a self-guided mini-tutorial built with Whiteboard about processing
+This is a self-guided micro-tutorial built with Whiteboard about processing
 files of a few file types. It is intended for a novice programmer audience. The
 goal is to teach how to write little node utility scripts that process files.
-
-It also talks a little bit about bash, and the concepts of piping, and on
-standard in and out.
 
 ## Intended audience
 

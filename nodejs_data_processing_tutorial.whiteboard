@@ -24,8 +24,8 @@ least **version 6** or greater.
 [slide]
 layout=vertical
 title=fs: reading and writing files
-editor=./0-reading-and-writing/linereverser.js
-terminal=./0-reading-and-writing
+editor=./reading-and-writing/linereverser.js
+terminal=./reading-and-writing
 markdown : '''
 
 # Using `fs` and `readline`
@@ -82,11 +82,63 @@ node output.txt
 '''
 
 [slide]
-title=Challenge 1: Comment stripper
+title=Challenge: Comment stripper
+terminal=./challenge-strip-comments/
 editor : '''
-1-challenge-strip-comments/commentstripper.js
-0-reading-and-writing/linereverser.js
-1-challenge-strip-comments/input.js
-1-challenge-strip-comments/commentstripper-finished.js
+challenge-strip-comments/commentstripper.js
+reading-and-writing/linereverser.js
+challenge-strip-comments/input.js
+challenge-strip-comments/commentstripper-finished.js
 '''
 
+
+[slide]
+title=Bonus challenges
+terminal=./challenge-csv-to-json/
+markdown : '''
+Want more? The next challenge is more difficult. It's to convert the given CSV file to
+a JSON file.
+
+CSV files look like this:
+
+```
+Name,    Language,   Color
+Alice,   Python,     Blue
+Bob,     JavaScript, Orange
+Candice, Rust,       Indigo
+```
+
+We want to transform it into a file that looks like this:
+```
+{"Name": "Alice", "Language": "Python", "Color": "Blue"}
+{"Name": "Bob", "Language": "JavaScript", "Color": "Orange"}
+{"Name": "Candice", "Language": "Rust", "Color": "Indigo"}
+```
+
+**HINT:** Remember to treat the first line differently, since its the title of
+each column.
+
+**NOTE:** No solution is provided for this one! You're on your own...
+'''
+
+terminal=challenge-csv-to-json
+editor : '''
+challenge-csv-to-json/csvtojson.js
+challenge-csv-to-json/input.csv
+reading-and-writing/linereverser.js
+'''
+
+[slide]
+title=Conclusion
+markdown : '''
+# That's it! 
+
+This was a very short tutorial. Hope you enjoyed it!
+
+For more programming related content, check out my blog at:
+[michaelb.org](http://michaelb.org/). I post regularly about web programming,
+video game programming, and GNU/Linux game development.
+
+This tutorial was created as an example tutorial for the slide-show app
+[Whiteboard](http://whiteboard.michaelb.org/).
+'''
